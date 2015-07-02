@@ -1,21 +1,20 @@
-
-<?php
+<<?php
 if(isset($_POST['submit'])){
    // form was submitted
-   $item=$_POST["username"];
-   $password=$_POST["password"];
+   $item=$_POST["item"];
+   $price=$_POST["price"];
 
-if($username=="Caroline"&&$password=="balos"||'aa'){
-   echo"User{$username}
-was successfully logged in";
+setcookie('item', $item, time()+3600);
+if($item=="Bread"||'aa'&&$price=="58"||'aa'){
+   echo"The {$item}item was successfully added to cart";
 }
 else {
    $message="There were some errors.";
 }
 }
 else{
-   $username="";
-   $message="Please log in.";
+   //$item="";
+   $message="Please enter the required";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -27,9 +26,9 @@ else{
   </head>
   <body>
    <?php echo $message; ?><br />
-   <form action="register.php" method="post">
-    Username:<input type="text" name="username" value="";/><br/>
-    Password:<input type="password" name="password" value=""/><br/>
+   <form action="shopping_cart.php" method="post">
+    Item<input type="text" name="item" value="";/><br/>
+    Price:<input type="text" name="price" value=""/><br/>
   <br/>
     <input type="submit" name="submit" value="Submit"/>
    </form>
