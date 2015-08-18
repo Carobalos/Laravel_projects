@@ -1,21 +1,30 @@
 <?php
-function caffeineBuzz (int $y) {
-if
-  ($y%3==0)
-  return "Java"
-if
-  ($y%3==0)
-else if 
-  ($y%4==0)
-return "coffee"
-if 
-  ($y%2==0)
-else if
-   ($y%3==0)
-else if
-   ($y%4==0)
-return "coffeeScript"
-else 
-return "mocha_missing"
-} 
+function caffeineBuzz(int $n){
+echo "mocha_missing!";
+if($n%4!=0)
+{
+if($n%3==0)
+{
+echo "Java";
+if($n%2==0)
+echo + "Script";
+else
+echo "Java";
+}
+else
+echo "mocha_missing!";
+}
+else
+{
+if($n%3==0)
+{
+echo  "Coffee";
+if($n%2==0)
+echo + "Script";
+else
+echo  "Coffee";
+}
+}
+}
+
 ?>
